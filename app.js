@@ -22,12 +22,12 @@ const fromEuroToDollar = function(valueInEuro){
 
 const fromDollarToYen = function(valueInDollar){
     let valueInYen = valueInDollar * 127.9;
-    return valueInYen;
+    return Number(valueInYen.toFixed(2));
 }
 
 const fromYenToPound = function(valueInYen){
-    let valueInPound = valueInYen * 0.8
-    return valueInPound
+    let valueInPound = (valueInYen * 0.8)
+    return Number(valueInPound.toFixed(1))
 }
 
 module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound };
